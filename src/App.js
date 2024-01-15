@@ -17,8 +17,11 @@ function App() {
     } 
   },[])
 
+  const basename = process.env.NODE_ENV === 'production' ? '/final_project' : '';
+
+
   return (
-    <Router>
+    <Router basename={basename}>
       <ProductContext.Provider value={{selectedProduct, setSelectedProduct }}>
         <div>
           <Navbar isLogin={isLogin} setIsLogin={setIsLogin} />
