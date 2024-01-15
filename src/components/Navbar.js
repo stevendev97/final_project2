@@ -8,12 +8,16 @@ export default function Navbar({ isLogin, setIsLogin }) {
     const handelLogout = () => {
         if (isLogin) {
             setIsLogin(false)
+            localStorage.setItem('isLogin', false)
         }
     }
     return (
         <div className='navbar'>
             <Link to='/'><p>Home</p></Link>
-            <p onClick={handelLogout}>{isLogin ? 'Logout' : 'Login'}</p>
+            <div className='right_nav'>
+                <Link to='/cart'><span>🛒</span></Link>
+                <p onClick={handelLogout}>{isLogin ? 'Logout' : 'Login'}</p>
+            </div>
         </div>
     )
 }

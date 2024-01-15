@@ -1,15 +1,17 @@
 import React, { useState ,useEffect } from 'react'
 import ProductList from './ProductList'
 import Product from './Product'
+import Cart from './cart'
+
 import { Routes, Route } from 'react-router-dom'
 
 export default function Main() {
-    const [selectedProduct, setSelectedProduct] = useState()
     return (
         <div>
             <Routes>
-                <Route path='/' element={<ProductList setSelectedProduct={setSelectedProduct} />} />
-                <Route path='/product' element={<Product selectedProduct={selectedProduct} />} />
+                <Route path='/' element={<ProductList />} />
+                <Route path='/product' element={<Product />} />
+                <Route path='/cart' element={<Cart />} />
             </Routes>
         </div>
     )

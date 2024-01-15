@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { ProductContext } from './ProductContext'
 import { Link } from 'react-router-dom'
 
-export default function ProductList({ setSelectedProduct }) {
+export default function ProductList() {
     const [products, setProducts] = useState([])
+    const { setSelectedProduct } = useContext(ProductContext)
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
@@ -20,7 +22,7 @@ export default function ProductList({ setSelectedProduct }) {
                                 <div>
                                     <img src={prod.thumbnail} />
                                     <h3>{prod.title}</h3>
-                                    <p>{prod.description}</p>
+                                    <p>{prod.description}</p>   
                                     <p>${prod.price}</p>
                                 </div> 
                             </Link>

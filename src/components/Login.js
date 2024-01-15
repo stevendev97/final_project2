@@ -17,6 +17,7 @@ export default function Login({ setIsLogin }) {
         if (user1.name === userName && user1.password === userPass) {
             console.log('login success')
             setIsLogin(true)
+            localStorage.setItem('isLogin', true)
         } else {
             console.log('login failed')
             setIsLogin(false)
