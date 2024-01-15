@@ -17,7 +17,7 @@ function App() {
     } 
   },[])
 
-  const basename = process.env.NODE_ENV === 'production' ? '/final_project' : '';
+  const basename = process.env.NODE_ENV === 'production' ? '/final_project2' : '';
 
 
   return (
