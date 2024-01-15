@@ -16,7 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node set-homepage.js && react-scripts build",
+    "set-homepage": "echo 'Setting homepage for production build' && node set-homepage.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://stevendev97.github.io/final_project/"
 }
