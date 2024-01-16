@@ -1,7 +1,7 @@
 import React, { useState ,useEffect } from 'react'
 import ProductList from './ProductList'
 import Product from './Product'
-import Cart from './cart'
+import Cart from './Cart'
 
 import { Routes, Route } from 'react-router-dom'
 

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 // import "./Cart.css"
 
 
-function Cart() {
+export default function Cart() {
   const items = useSelector(state => state.cart.items);
   //enchance cart state
   //loop through ori cart state from redux
@@ -34,4 +34,3 @@ function Cart() {
   )
 }
 
-export default Cart
