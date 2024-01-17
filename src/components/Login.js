@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Login.css'
 
 export default function Login({ setIsLogin }) {
     const [userName, setUserName] = useState('')
@@ -26,12 +27,16 @@ export default function Login({ setIsLogin }) {
 
   return (
     <div>
-        <form onSubmit={handelSubmit}>
-            <h1>Login</h1>
-            <label>User Name</label>
-            <input value={userName} onChange={(e) => setUserName(e.target.value)} />
-            <label>Password</label>
-            <input value={userPass} type='password' onChange={(e) => setUserPass(e.target.value)} />
+        <form className='login_form' onSubmit={handelSubmit}>
+            <h2>Login</h2>
+            <label className='input_cont'>
+                User Name:
+                <input value={userName} onChange={(e) => setUserName(e.target.value)} />
+            </label>
+            <label className='input_cont'>
+                Password:
+                <input value={userPass} type='password' onChange={(e) => setUserPass(e.target.value)} />
+            </label>
             <button>Login</button>
         </form>
     </div>

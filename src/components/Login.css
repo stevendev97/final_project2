@@ -1,0 +1,27 @@
+.login_form {
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid grey;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.input_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_cont input {
+    width: 200px;
+    height: 25px;
+}
+
+.login_form button {
+    height: 30px; 
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

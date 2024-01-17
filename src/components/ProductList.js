@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { ProductContext } from './ProductContext'
 import { Link } from 'react-router-dom'
+import './ProductList.css'
 
 export default function ProductList() {
     const [products, setProducts] = useState([])
@@ -12,14 +13,14 @@ export default function ProductList() {
             .then(res => setProducts(res.products.slice(0,10)))
     }, [])
     return (
-        <div>
+        <div className='product_listing_container'>
             <h1>Product Listing Page</h1>
-            <div>
+            <div className='product_listing'>
                 {
                     products.map((prod) => {
                         return (
                             <Link onClick={() => {setSelectedProduct(prod)}} to="/product">
-                                <div>
+                                <div className='product_card'>
                                     <img src={prod.thumbnail} />
                                     <h3>{prod.title}</h3>
                                     <p>{prod.description}</p>   

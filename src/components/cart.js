@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-// import "./Cart.css"
+import "./Cart.css"
 
 
 export default function Cart() {
@@ -12,7 +12,6 @@ export default function Cart() {
 
   return (
     <div className='cart_wrapper'>
-        <h1>You're in cart page</h1>
       {
         items?.map((item) => {
           return (
